@@ -19,7 +19,7 @@ The objective was to understand how services communicate over a network and gain
 ```mermaid
 flowchart TB
     subgraph VM["Ubuntu VM - VMware Workstation"]
-        A[Chrome Browser]
+        A[Browser]
         B[Open WebUI :8080]
         C[uvx - Python 3.12]
         A -->|HTTP - localhost:8080| B
