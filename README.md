@@ -57,11 +57,16 @@ netstat -ano | findstr :11434
 ### 2. Ubuntu VM – Open WebUI Frontend
 
 - Created an Ubuntu virtual machine using VMware Workstation.
-- Set up a Python environment for Open WebUI.
-- Installed Open WebUI using Python package tooling (pip/uv).
+- Used `uv` for Python version and environment management.
+- Installed Open WebUI and its dependencies using `uv`.
+- Used a separate Python environment to accommodate Open WebUI's Python version requirements.
 - Started the Open WebUI service and accessed its browser interface.
 
 Open WebUI was available on port `8080` in my setup.
+
+**Why uv?**
+
+I used `uv` because Open WebUI had different Python version requirements from the Python environment I was initially working with. It helped me manage the appropriate Python environment and install the required dependencies without interfering with other Python projects.
 
 ### 3. Connecting Ubuntu to Windows
 
