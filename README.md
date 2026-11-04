@@ -179,20 +179,7 @@ This rule allows inbound TCP connections to port `11434` from the specified Ubun
 
 ## 5. Ubuntu – Open WebUI Frontend Setup
 
-### Step 1: Check Ubuntu version
-
-```bash
-lsb_release -a
-```
-
-My environment:
-
-```text
-Ubuntu 26.04.1 LTS
-Python 3.14.4
-```
-
-### Step 2: Install uv
+### Step 1: Install uv
 
 `uv` is a Python package and environment manager.
 
@@ -220,7 +207,7 @@ Installed version:
 uv 0.13.6
 ```
 
-### Step 3: Install Python 3.12
+### Step 2: Install Python 3.12
 
 Ubuntu already had Python 3.14.4 available.
 
@@ -236,7 +223,7 @@ Check the available Python versions:
 uv python list
 ```
 
-### Step 4: Create an application data directory
+### Step 3: Create an application data directory
 
 ```bash
 mkdir -p ~/open-webui-data
@@ -244,7 +231,7 @@ mkdir -p ~/open-webui-data
 
 This directory provides a persistent location for Open WebUI application data, including chat history and settings.
 
-### Step 5: Start Open WebUI
+### Step 4: Start Open WebUI
 
 I used `uvx` to run Open WebUI with Python 3.12.
 
@@ -269,7 +256,7 @@ uvx --python 3.12 open-webui@latest serve --host 0.0.0.0 --port 8080
 
 The first run downloads Open WebUI and its required dependencies.
 
-### Step 6: Verify the Open WebUI server
+### Step 5: Verify the Open WebUI server
 
 Open another Ubuntu terminal:
 
@@ -285,7 +272,7 @@ LISTEN 0 2048 0.0.0.0:8080 0.0.0.0:* users:(("python",pid=5884,fd=34))
 
 This confirms that Open WebUI is listening on port `8080`.
 
-### Step 7: Test Ollama connectivity from Ubuntu
+### Step 6: Test Ollama connectivity from Ubuntu
 
 Before opening the chatbot, verify that Ubuntu can reach the Windows Ollama API:
 
@@ -314,19 +301,7 @@ ollama serve
 
 Keep this terminal running.
 
-### 3. Connect to Ubuntu
-
-From another Windows PowerShell window:
-
-```powershell
-ssh <UBUNTU_USERNAME>@192.168.72.128
-```
-
-Replace the username and IP address with your actual Ubuntu credentials and current VM address.
-
-SSH is optional; the commands can also be run directly inside the Ubuntu VM terminal.
-
-### 4. Start Open WebUI
+### 3. Start Open WebUI
 
 Inside Ubuntu:
 
@@ -338,7 +313,7 @@ uvx --python 3.12 open-webui@latest serve --host 0.0.0.0 --port 8080
 
 Keep this terminal running.
 
-### 5. Open the chatbot
+### 4. Open the chatbot
 
 Open Chrome and visit:
 
