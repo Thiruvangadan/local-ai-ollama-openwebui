@@ -2,7 +2,7 @@
 
 A hands-on project to explore local AI, Linux, Python environment management, virtualization, networking and communication between services running in separate environments.
 
-## 1. Overview
+## Overview
 
 This project demonstrates how to run a local AI chatbot using **Ollama** and **Open WebUI**, with the backend and frontend running on two separate environments.
 
@@ -14,7 +14,7 @@ Instead of running everything on one machine, I configured:
 
 The objective was to understand how services communicate over a network and gain practical experience with Linux, virtualization, API connectivity and troubleshooting.
 
-## 2. Architecture
+## Architecture
 
 ```mermaid
 flowchart TB
@@ -50,7 +50,7 @@ flowchart TB
 | VMware Workstation | Virtualization |
 | VMware NAT (VMnet8) | Host-to-guest network connectivity |
 
-## 3. Network Configuration
+## Network Configuration
 
 The VMware network adapter uses **NAT (VMnet8)**.
 
@@ -88,7 +88,7 @@ VMware Network Adapter VMnet8
 IPv4 Address: 192.168.72.1
 ```
 
-## 4. Windows – Ollama Backend Setup
+## Windows – Ollama Backend Setup
 
 ### Step 1: Check Ollama installation
 
@@ -282,7 +282,7 @@ curl http://192.168.72.1:11434/api/tags
 
 A successful JSON response confirms that the Ollama API is reachable from Ubuntu.
 
-## 6. Starting the Application
+## Starting the Application
 
 The following steps describe how I start the application after shutting down the environments.
 
@@ -325,7 +325,7 @@ If accessing it from another machine, ensure the Ubuntu VM's firewall and networ
 
 Select an available model and start chatting!
 
-## 7. Troubleshooting
+## Troubleshooting
 
 Some of the main issues encountered during this project involved communication between the Windows host and Ubuntu VM.
 
@@ -356,7 +356,7 @@ curl http://192.168.72.1:11434/api/tags
 ss -lntp | grep 8080
 ```
 
-## 8. Security Considerations
+## Security Considerations
 
 - Do not expose Ollama's API directly to the public internet.
 - Restrict inbound connections to the necessary network addresses.
@@ -364,7 +364,7 @@ ss -lntp | grep 8080
 - Do not publish passwords, authentication tokens or private configuration.
 - Avoid committing local application databases or personal chat history to GitHub.
 
-## 9. Key Learnings
+## Key Learnings
 
 Through this project, I gained practical experience with:
 
