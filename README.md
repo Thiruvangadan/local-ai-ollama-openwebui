@@ -177,7 +177,7 @@ This rule allows inbound TCP connections to port `11434` from the specified Ubun
 - Restrict access to the required VM address and network.
 - Review other firewall rules to ensure they do not unintentionally permit wider access.
 
-## 5. Ubuntu – Open WebUI Frontend Setup
+## Ubuntu – Open WebUI Frontend Setup
 
 ### Step 1: Install uv
 
